@@ -13,7 +13,7 @@ export default async function Home() {
         <main className='container mx-auto px-4 py-8'>
           <HeroSection/>
           <div className='mt-16'>
-            <h2 className='text-2xl font-semibold text-center mb-2'>Here Something That</h2>
+            <h2 className='text-2xl text-[#EACA91] font-semibold text-center mb-2'>Here Something That</h2>
             <h3 className='text-xl font-medium text-center mb-8'>Already Made</h3>
             <Carousel items={carouselItems}/>
          
