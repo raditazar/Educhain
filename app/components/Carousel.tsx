@@ -23,31 +23,31 @@ export default function Carousel({ items = [], isLoading = false }: CarouselProp
       id: 1,
       title: "Video 1",
       imageUrl: "/placeholder.svg?height=300&width=200",
-      narrative: "Click video here to watch topic about mathematics",
+      narrative: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     },
     {
       id: 2,
       title: "Video 2",
       imageUrl: "/placeholder.svg?height=300&width=200",
-      narrative: "Click video here to watch topic about science",
+      narrative: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     },
     {
       id: 3,
       title: "Video 3",
       imageUrl: "/placeholder.svg?height=300&width=200",
-      narrative: "Click video here to watch topic about history",
+      narrative: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     },
     {
       id: 4,
       title: "Video 4",
       imageUrl: "/placeholder.svg?height=300&width=200",
-      narrative: "Click video here to watch topic about languages",
+      narrative: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     },
     {
       id: 5,
       title: "Video 5",
       imageUrl: "/placeholder.svg?height=300&width=200",
-      narrative: "Click video here to watch topic about arts",
+      narrative: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     },
   ]
 
@@ -111,8 +111,8 @@ export default function Carousel({ items = [], isLoading = false }: CarouselProp
     }, 500)
   }
 
-  const goToItem = (relativeIndex: number) => {
-    if (isTransitioning || relativeIndex === 0) return
+  const goToItem = (relativeIndex: number | undefined) => {
+    if (isTransitioning || relativeIndex === undefined || relativeIndex === 0) return;
     
     setIsTransitioning(true)
     setCurrentIndex((prevIndex) => {
@@ -142,8 +142,8 @@ export default function Carousel({ items = [], isLoading = false }: CarouselProp
                 className={`flex-shrink-0 mx-auto
                   ${index === 2 ? 'w-[220px] h-[330px]' : 'w-[160px] h-[240px]'}`}
               >
-                <div className="h-full bg-[#2a3f5f] rounded-lg animate-pulse"></div>
-                <div className="h-4 mt-2 bg-[#2a3f5f] rounded animate-pulse w-3/4"></div>
+                <div className="h-full rounded-lg animate-pulse"></div>
+                <div className="h-4 mt-2 rounded animate-pulse w-3/4"></div>
               </div>
             ))
         ) : visibleItems.length > 0 ? (
