@@ -1,14 +1,26 @@
 import Link from 'next/link'
-export default function Home() {
+import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import Carousel, {type CarouselItem} from '../components/Carousel';
+async function getCarouseItems(): Promise<CarouselItem[]>{
+  return []
+}
+export default async function Home() {
+  const carouselItems: CarouselItem[] = await getCarouseItems()
   return (
     <>
-      <div className='flex flex-col items-center justify-center h-screen'>
-        <h1 className='text-3xl font-bold mb-6'>Home</h1>
-        <Link href="/creator">
-          <button className='px-6 py-2 rounded-md text-white hover:bg-red transition cursor-pointer'>
-              Try making content
-          </button>
-        </Link>
+      <div className='min-h-screen bg-[#1F3B5B] text-white'>
+        <main className='container mx-auto px-4 py-8'>
+          <HeroSection/>
+          <div className='mt-16'>
+            <h2 className='text-2xl font-semibold text-center mb-2'>Here Something That</h2>
+            <h3 className='text-xl font-medium text-center mb-8'>Already Made</h3>
+            <Carousel items={carouselItems}/>
+         
+          </div>
+        </main>
+
+        
       </div>
       
     </>

@@ -14,8 +14,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({title, buttonText, onClick}) => {
         </p>
         <div className='w-full flex justify-center'>
             <button
-                style={{backgroundColor:"var(--highlight)"}}
-                className="font-semibold w-[240px] text-xl text-black px-6 py-2 rounded-md cursor-pointer"
+                className="bg-[#EACA91] font-semibold w-[240px] text-xl text-black px-6 py-2 rounded-md cursor-pointer"
                 onClick={onClick}
             >
                 {buttonText}
