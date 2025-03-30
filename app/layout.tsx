@@ -46,10 +46,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jakartaSans.variable} flex flex-col h-screen`} 
+        className={`${jakartaSans.variable} flex flex-col min-h-screen`} 
       >
         <Navbar/>
-        <main className="flex-1 overflow-hidden">{children}</main>
+        <main className="flex-1 overflow-auto">{children}</main>
         
       </body>
     </html>

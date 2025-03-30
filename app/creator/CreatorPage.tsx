@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Dropdown from "../components/Dropdown";
 import CategorySelector from "../components/CategorySelector";
-import EditableTitle from "../components/EditableTitle";
 import Modal from "../components/Modal";
 import GeneratedContent from "../components/GeneratedContent";
 
@@ -15,7 +14,7 @@ const CreatorPage: React.FC<CreatorPageProps> = ({ onBack }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [voiceStyle, setVoiceStyle] = useState("Presets 1");
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-    const [imageUrl, setImageUrl] = useState<string | undefined>(undefined);
+    const [imageUrl, setImageUrl] = useState<string[] | undefined>(undefined);
     
     return (
         <div className="flex justify-center items-center min-h-screen pb-8">
@@ -23,7 +22,7 @@ const CreatorPage: React.FC<CreatorPageProps> = ({ onBack }) => {
                 <div>
                   <GeneratedContent
                   title={title}
-                  imageUrl={imageUrl}
+                  imageUrls={imageUrl}
                 />
                 </div>
                 
