@@ -1,7 +1,9 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "./components/Navbar";
+
 const jakartaSans = localFont({
   src: [
     {
@@ -48,7 +50,7 @@ export default function RootLayout({
       <body
         className={`${jakartaSans.variable} flex flex-col min-h-screen`} 
       >
-        <Navbar/>
+        <Navbar />
         <main className="flex-1 overflow-auto">{children}</main>
         
       </body>
