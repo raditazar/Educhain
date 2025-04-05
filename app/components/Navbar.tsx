@@ -1,4 +1,5 @@
 'use client'
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 import React, { useRef, useState } from 'react'
 import Link from 'next/link'
@@ -17,14 +18,15 @@ const Navbar = () => {
         
         <Link href="/" className='font-semibold'>Home</Link>
         <Link href="/explore" className='font-semibold'>Explore</Link>
-        <button
+        {/* <button
           ref={connectButtonRef}
           onClick={() => setIsWalletModalOpen(true)}
           className='bg-[#EACA91] font-semibold text-black px-4 py-2 rounded-2xl'
         
         >
           Connect Wallet
-        </button>
+        </button> */}
+        <ConnectButton />
       </nav>
 
       <ConnectWalletModal

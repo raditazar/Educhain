@@ -11,7 +11,7 @@ interface ContentInfoProps {
 
 export default function ContentInfo({ title, creator, likes }: ContentInfoProps) {
   return (
-    <div className="p-4 bg-[#EACA91]/90 text-black">
+    <div className="p-4 bg-[#EACA91]/90 text-black rounded-md">
       <div className="flex items-center gap-2 mb-2">
         <div className="w-8 h-8 rounded-full bg-[#f0a04b] flex items-center justify-center overflow-hidden">
           <span className="font-bold text-xs">{creator.name.charAt(0)}</span>
